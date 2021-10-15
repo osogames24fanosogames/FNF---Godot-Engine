@@ -1,0 +1,95 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://UI/NOTE_assets.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1024, 612, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1280, 612, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 612, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 768, 612, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 170, 612, 170, 204 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "PRESSEDnMISS",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "PRESSEDnNOTE",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 5 ) ],
+"loop": true,
+"name": "nothing",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 816, 256, 204 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "PRESSEDnMISS",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ) ],
+"loop": true,
+"name": "PRESSEDnNOTE",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "nothing",
+"speed": 5.0
+} ]
+
+[node name="Arrows" type="Node2D"]
+
+[node name="UpArrow" type="AnimatedSprite" parent="."]
+position = Vector2( 581.949, 122.754 )
+frames = SubResource( 6 )
+animation = "nothing"
+playing = true
+
+[node name="DownArrow" type="AnimatedSprite" parent="."]
+position = Vector2( 581.949, 122.754 )
+frames = SubResource( 10 )
+animation = "PRESSEDnNOTE"
+frame = 1
+playing = true
+offset = Vector2( -140, -32 )
