@@ -10,6 +10,5 @@ Notes:
 - This project is still in it's VERY early stages. Don't expect much right now.
 - If you wanna make mods once we release a stable version, just wait until we add the building.md file.
 - This was made in Godot 3.3.stable.offical, so versions of Godot before 3.3 might have trouble getting the project to work.
-- Main is the old code (from Prototype 2), NewCode is the current version.
 
 That's all folks! :D
