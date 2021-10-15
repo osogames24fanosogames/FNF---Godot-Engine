@@ -18,9 +18,10 @@ visible = false
 [node name="BOYFRIEND" parent="." instance=ExtResource( 2 )]
 
 [node name="AnimatedSprite" parent="BOYFRIEND" index="0"]
-position = Vector2( 766.504, 448.164 )
-animation = "idle"
-frame = 4
+position = Vector2( 765.797, 448.164 )
+animation = "attack"
+frame = 1
+playing = true
 
 [node name="Camera2D" parent="BOYFRIEND" index="1"]
 position = Vector2( 767.064, 449.225 )

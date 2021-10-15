@@ -56,6 +56,7 @@ func _on_AnimatedSprite_gotHit():
 	pass # Replace with function body.
 
 func _on_AnimatedSprite_idle():
+	play("idle")
 	pass # Replace with function body.
 
 func _on_AnimatedSprite_left():

@@ -10,9 +10,9 @@ extends Node2D
 func _ready():
 	# Makes stuff invisible early
 # warning-ignore:standalone_expression
-	get_node("restart").visible == "false"
+	# get_node("restart").visible = "false"
 # warning-ignore:standalone_expression
-	get_node("black").visible == "false"
+	# get_node("black").visible = "false"
 	pass
 
 
