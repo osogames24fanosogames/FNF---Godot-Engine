@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://UI/menuBG.png" type="Texture" id=1]
 [ext_resource path="res://UI/logoBumpin.png" type="Texture" id=2]
@@ -35,6 +35,14 @@ animations = [ {
 
 [sub_resource type="DynamicFont" id=6]
 size = 40
+outline_size = 3
+outline_color = Color( 0.376471, 0.376471, 0.376471, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 39
+outline_size = 2
+outline_color = Color( 0.490196, 0.490196, 0.490196, 1 )
 font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
@@ -42,7 +50,8 @@ font_data = ExtResource( 4 )
 [node name="menuBG" type="Sprite" parent="."]
 modulate = Color( 0.847059, 0.615686, 0, 1 )
 self_modulate = Color( 0.27451, 0.219608, 0, 1 )
-position = Vector2( 510.327, 294.532 )
+light_mask = 279109
+position = Vector2( 509.827, 293.532 )
 scale = Vector2( 0.814151, 0.85761 )
 texture = ExtResource( 1 )
 
@@ -51,23 +60,73 @@ position = Vector2( 294.156, 177.837 )
 scale = Vector2( 0.69, 0.69 )
 frames = SubResource( 5 )
 animation = "Bump"
+frame = 2
 playing = true
 
 [node name="GODOT" type="Sprite" parent="."]
-position = Vector2( 247.284, 375.496 )
+position = Vector2( 242.784, 332.996 )
+rotation = -0.190241
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 189.007
-margin_top = 295.473
-margin_right = 607.007
-margin_bottom = 357.473
+margin_left = 43.5072
+margin_top = 259.973
+margin_right = 461.507
+margin_bottom = 321.973
 custom_fonts/font = SubResource( 6 )
 text = "But Made In"
 align = 1
 valign = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 1.0
+margin_right = 1024.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 7 )
+text = "Story Mode"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 91.0
+margin_right = 1024.0
+margin_bottom = 180.0
+custom_fonts/font = SubResource( 7 )
+text = "Freeplay"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 181.0
+margin_right = 1024.0
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 7 )
+text = "Github"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 678.0
+margin_top = 271.0
+margin_right = 1024.0
+margin_bottom = 360.0
+custom_fonts/font = SubResource( 7 )
+text = "Settings"
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
