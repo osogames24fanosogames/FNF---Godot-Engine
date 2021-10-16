@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://UI/NOTE_assets.png" type="Texture" id=1]
 
@@ -45,6 +45,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1024, 816, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1280, 816, 256, 204 )
+
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
@@ -60,9 +70,9 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 816, 256, 204 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
 "name": "PRESSEDnMISS",
 "speed": 12.0
@@ -78,6 +88,49 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 0, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 768, 0, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 512, 816, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 768, 816, 256, 204 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 816, 256, 204 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "PRESSEDnMISS",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "PRESSEDnNOTE",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 17 ) ],
+"loop": true,
+"name": "nothing",
+"speed": 5.0
+} ]
+
 [node name="Arrows" type="Node2D"]
 
 [node name="UpArrow" type="AnimatedSprite" parent="."]
@@ -88,8 +141,14 @@ playing = true
 
 [node name="DownArrow" type="AnimatedSprite" parent="."]
 position = Vector2( 581.949, 122.754 )
-frames = SubResource( 10 )
-animation = "PRESSEDnNOTE"
-frame = 1
+frames = SubResource( 12 )
+animation = "nothing"
 playing = true
 offset = Vector2( -140, -32 )
+
+[node name="LeftArrow" type="AnimatedSprite" parent="."]
+position = Vector2( 581.949, 122.754 )
+frames = SubResource( 18 )
+animation = "nothing"
+playing = true
+offset = Vector2( -320, -32 )
