@@ -19,14 +19,13 @@ visible = false
 
 [node name="AnimatedSprite" parent="BOYFRIEND" index="0"]
 position = Vector2( 765.797, 448.871 )
-animation = "idle"
-frame = 4
+animation = "Gothit"
+frame = 2
 
 [node name="Camera2D" parent="BOYFRIEND" index="1"]
 position = Vector2( 767.064, 449.225 )
 
-[connection signal="GameOver" from="BOYFRIEND/AnimatedSprite" to="BOYFRIEND" method="_on_AnimatedSprite_GameOver"]
-[connection signal="GameOver" from="BOYFRIEND/AnimatedSprite" to="DeadScreen" method="_on_AnimatedSprite_GameOver"]
+[connection signal="play_animation" from="BOYFRIEND/AnimatedSprite" to="BOYFRIEND/AnimatedSprite" method="_on_AnimatedSprite_play_animation"]
 
 [editable path="DeadScreen"]
 [editable path="BOYFRIEND"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://UI/NOTE_assets.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Arrows.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -15,22 +16,22 @@ region = Rect2( 1280, 612, 256, 204 )
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1020, 256, 204, 256 )
+region = Rect2( 170, 612, 170, 204 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 512, 612, 256, 204 )
+region = Rect2( 1020, 256, 204, 256 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 768, 612, 256, 204 )
+region = Rect2( 512, 612, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 170, 612, 170, 204 )
+region = Rect2( 768, 612, 256, 204 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
@@ -41,18 +42,18 @@ animations = [ {
 }, {
 "frames": [ SubResource( 3 ) ],
 "loop": true,
+"name": "nothing",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
 "name": "end",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"frames": [ SubResource( 5 ), SubResource( 6 ) ],
 "loop": true,
 "name": "PRESSEDnNOTE",
 "speed": 12.0
-}, {
-"frames": [ SubResource( 6 ) ],
-"loop": true,
-"name": "nothing",
-"speed": 5.0
 } ]
 
 [sub_resource type="AtlasTexture" id=8]
@@ -68,22 +69,22 @@ region = Rect2( 1280, 816, 256, 204 )
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1362, 256, 227, 256 )
+region = Rect2( 0, 816, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 256, 204 )
+region = Rect2( 1362, 256, 227, 256 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 256, 204 )
+region = Rect2( 0, 0, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 816, 256, 204 )
+region = Rect2( 256, 0, 256, 204 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
@@ -94,18 +95,18 @@ animations = [ {
 }, {
 "frames": [ SubResource( 10 ) ],
 "loop": true,
+"name": "nothing",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
 "name": "end",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "PRESSEDnNOTE",
 "speed": 12.0
-}, {
-"frames": [ SubResource( 13 ) ],
-"loop": true,
-"name": "nothing",
-"speed": 5.0
 } ]
 
 [sub_resource type="AtlasTexture" id=15]
@@ -121,22 +122,22 @@ region = Rect2( 768, 0, 256, 204 )
 [sub_resource type="AtlasTexture" id=17]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1460, 0, 292, 256 )
+region = Rect2( 256, 816, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 512, 816, 256, 204 )
+region = Rect2( 1460, 0, 292, 256 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 768, 816, 256, 204 )
+region = Rect2( 512, 816, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 256, 816, 256, 204 )
+region = Rect2( 768, 816, 256, 204 )
 
 [sub_resource type="SpriteFrames" id=21]
 animations = [ {
@@ -147,18 +148,18 @@ animations = [ {
 }, {
 "frames": [ SubResource( 17 ) ],
 "loop": true,
+"name": "nothing",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 18 ) ],
+"loop": true,
 "name": "end",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "PRESSEDnNOTE",
 "speed": 12.0
-}, {
-"frames": [ SubResource( 20 ) ],
-"loop": true,
-"name": "nothing",
-"speed": 5.0
 } ]
 
 [sub_resource type="AtlasTexture" id=22]
@@ -174,22 +175,22 @@ region = Rect2( 682, 408, 341, 204 )
 [sub_resource type="AtlasTexture" id=24]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1135, 0, 227, 256 )
+region = Rect2( 1536, 816, 256, 204 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1752, 816, 292, 204 )
+region = Rect2( 1135, 0, 227, 256 )
 
 [sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1752, 612, 292, 204 )
+region = Rect2( 1752, 816, 292, 204 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1536, 816, 256, 204 )
+region = Rect2( 1752, 612, 292, 204 )
 
 [sub_resource type="SpriteFrames" id=28]
 animations = [ {
@@ -200,21 +201,22 @@ animations = [ {
 }, {
 "frames": [ SubResource( 24 ) ],
 "loop": true,
+"name": "nothing",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 25 ) ],
+"loop": true,
 "name": "end",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 25 ), SubResource( 26 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "PRESSEDnNOTE",
 "speed": 12.0
-}, {
-"frames": [ SubResource( 27 ) ],
-"loop": true,
-"name": "nothing",
-"speed": 5.0
 } ]
 
 [node name="Arrows" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="UpArrow" type="AnimatedSprite" parent="."]
 position = Vector2( 550.707, 84.185 )

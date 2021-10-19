@@ -1,30 +1,21 @@
 extends AnimatedSprite
 
 # Position
-var v2 = Vector2(0, 0)
+var v2
+var move
+var OGposX
+var OGposY
 
 # signals (for animations)
-signal peacesign
-signal idle
-signal left
-signal leftmiss
-signal attack
-signal gotHit
-signal Preattack
-signal right
-signal rightMiss
-signal thunder
-signal up
-signal upMiss
-signal down
-signal downMiss
-signal dodge
-signal GameOver
+signal play_animation(Requestedanimation)
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(v2)
+	move = Vector2()
+	OGposX = 765.797
+	OGposY = 448.871
 	pass # Replace with function body.
 
 
@@ -34,53 +25,43 @@ func _process(delta):
 
 # Animations.
 
-func _on_AnimatedSprite_GameOver():
+
+
+
+func _on_AnimatedSprite_play_animation(Requestedanimation):
+	play(Requestedanimation)
+	move = Vector2()
+	
+	if Requestedanimation == "idle":
+		move.x = 10
+		move.y = 0
+	elif Requestedanimation == "right" or Requestedanimation == "right miss":
+		move.x = 30
+		move.y = 0
+	elif Requestedanimation == "left miss":
+		move.x = 5
+		move.y = 0
+	elif Requestedanimation == "thunder":
+		move.x = 0
+		move.y = 19
+	elif Requestedanimation == "down" or Requestedanimation == "down miss":
+		move.x = 0
+		move.y = 32
+	elif Requestedanimation == "attack":
+		move.x = -81.318
+		move.y = -125
+	elif Requestedanimation == "dodge":
+		move.x = 0
+		move.y = -10
+	elif Requestedanimation == "Preattack":
+		move.x = OGposX
+		move.y = OGposY + 43
+	elif Requestedanimation == "Gothit" or Requestedanimation == "peace":
+		move.x = OGposX
+		move.y = OGposY + 10
+	else:
+		print("No offset needed for this animation.")
+	move.normalized()
+	position.x = move.x + OGposX
+	position.y = move.y + OGposY
 	pass
-
-func _on_AnimatedSprite_Preattack():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_attack():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_dodge():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_down():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_downMiss():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_gotHit():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_idle():
-	play("idle")
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_left():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_leftmiss():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_peacesign():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_right():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_rightMiss():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_thunder():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_up():
-	pass # Replace with function body.
-
-func _on_AnimatedSprite_upMiss():
-	pass # Replace with function body.
-
-# 
