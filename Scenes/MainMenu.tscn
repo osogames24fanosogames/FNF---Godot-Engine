@@ -34,7 +34,7 @@ animations = [ {
 } ]
 
 [sub_resource type="DynamicFont" id=6]
-size = 40
+size = 46
 outline_size = 3
 outline_color = Color( 0.376471, 0.376471, 0.376471, 1 )
 font_data = ExtResource( 4 )
@@ -72,7 +72,7 @@ offset = Vector2( 0, 25 )
 
 [node name="GODOT" type="Sprite" parent="."]
 position = Vector2( 242.784, 332.996 )
-rotation = -0.253073
+rotation = -0.0628318
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
@@ -133,7 +133,7 @@ margin_right = 380.5
 margin_bottom = 590.0
 custom_fonts/font = SubResource( 8 )
 custom_colors/font_color = Color( 1, 0.960784, 0, 1 )
-text = "Prototype 11"
+text = "Prototype 12"
 valign = 1
 autowrap = true
 __meta__ = {
