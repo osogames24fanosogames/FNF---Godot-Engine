@@ -1,8 +1,8 @@
 [gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://UI/BOYFRIEND.png" type="Texture" id=1]
-[ext_resource path="res://AnimatedSprite.gd" type="Script" id=2]
-[ext_resource path="res://BOYFRIEND.gd" type="Script" id=3]
+[ext_resource path="res://Source/AnimatedSprite.gd" type="Script" id=2]
+[ext_resource path="res://Source/BOYFRIEND.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -342,6 +342,7 @@ __meta__ = {
 position = Vector2( -1.41425, -0.84845 )
 frames = SubResource( 50 )
 animation = "left miss"
+frame = 1
 playing = true
 script = ExtResource( 2 )
 
@@ -349,20 +350,3 @@ script = ExtResource( 2 )
 position = Vector2( -0.146454, 0.212555 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
-
-[connection signal="GameOver" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_GameOver"]
-[connection signal="Preattack" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_Preattack"]
-[connection signal="attack" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_attack"]
-[connection signal="dodge" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_dodge"]
-[connection signal="down" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_down"]
-[connection signal="downMiss" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_downMiss"]
-[connection signal="gotHit" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_gotHit"]
-[connection signal="idle" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_idle"]
-[connection signal="left" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_left"]
-[connection signal="leftmiss" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_leftmiss"]
-[connection signal="peacesign" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_peacesign"]
-[connection signal="right" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_right"]
-[connection signal="rightMiss" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_rightMiss"]
-[connection signal="thunder" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_thunder"]
-[connection signal="up" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_up"]
-[connection signal="upMiss" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_upMiss"]

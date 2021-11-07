@@ -23,11 +23,7 @@ func _ready():
 func _process(delta):
 	pass
 
-# Animations.
-
-
-
-
+# Animation (+ Offset).
 func _on_AnimatedSprite_play_animation(Requestedanimation):
 	play(Requestedanimation)
 	move = Vector2()

@@ -9,10 +9,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# Makes stuff invisible early
-# warning-ignore:standalone_expression
-	# get_node("restart").visible = "false"
-# warning-ignore:standalone_expression
-	# get_node("black").visible = "false"
+	get_node("restart").visible = false
+	get_node("black").visible = false
 	pass
 
 
@@ -23,4 +21,9 @@ func _ready():
 
 
 func _on_AnimatedSprite_GameOver():
+	get_node("black").visible = true
+	pass # Replace with function body.
+
+func _on_Died_finished():
+	get_node("restart").visible = true
 	pass # Replace with function body.

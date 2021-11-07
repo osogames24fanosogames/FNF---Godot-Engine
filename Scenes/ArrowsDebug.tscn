@@ -30,37 +30,37 @@ region = Rect2( 1884, 357, 157, 51 )
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1632, 510, 204, 170 )
+region = Rect2( 1727, 936, 157, 78 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1632, 680, 204, 170 )
+region = Rect2( 1884, 408, 157, 51 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1632, 340, 204, 170 )
+region = Rect2( 1884, 0, 157, 78 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1632, 170, 204, 170 )
+region = Rect2( 1632, 510, 204, 170 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1727, 936, 157, 78 )
+region = Rect2( 1632, 680, 204, 170 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1884, 408, 157, 51 )
+region = Rect2( 1632, 340, 204, 170 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 1884, 0, 157, 78 )
+region = Rect2( 1632, 170, 204, 170 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
@@ -91,110 +91,218 @@ animations = [ {
 }, {
 "frames": [ SubResource( 6 ) ],
 "loop": true,
-"name": "left",
+"name": "rightholdend",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 7 ) ],
 "loop": true,
-"name": "right",
+"name": "lefthold",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 8 ) ],
 "loop": true,
-"name": "up",
+"name": "downholdend",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 9 ) ],
 "loop": true,
-"name": "down",
+"name": "left",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 10 ) ],
 "loop": true,
-"name": "rightholdend",
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 11 ) ],
 "loop": true,
-"name": "lefthold",
+"name": "up",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 12 ) ],
 "loop": true,
-"name": "downholdend",
+"name": "down",
 "speed": 5.0
 } ]
 
 [node name="Arrows" type="Node2D"]
 
-[node name="UpArrow" type="AnimatedSprite" parent="."]
+[node name="animated" type="Node2D" parent="."]
+
+[node name="UpArrow" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "up"
 
-[node name="DownArrow" type="AnimatedSprite" parent="."]
+[node name="DownArrow" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "down"
 
-[node name="LeftArrow" type="AnimatedSprite" parent="."]
+[node name="LeftArrow" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "left"
 
-[node name="RightArrow" type="AnimatedSprite" parent="."]
+[node name="RightArrow" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "right"
 
-[node name="RightArrowHold" type="AnimatedSprite" parent="."]
+[node name="RightArrowHold" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "righthold"
 
-[node name="LeftArrowHold" type="AnimatedSprite" parent="."]
+[node name="LeftArrowHold" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "lefthold"
 
-[node name="DownArrowHold" type="AnimatedSprite" parent="."]
+[node name="DownArrowHold" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "downhold"
 
-[node name="UpArrowHold" type="AnimatedSprite" parent="."]
+[node name="UpArrowHold" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "uphold"
 
-[node name="UpArrowHoldEnd" type="AnimatedSprite" parent="."]
+[node name="UpArrowHoldEnd" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "upholdend"
 
-[node name="DownArrowHoldEnd" type="AnimatedSprite" parent="."]
+[node name="DownArrowHoldEnd" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "downholdend"
 
-[node name="LeftArrowHoldEnd" type="AnimatedSprite" parent="."]
+[node name="LeftArrowHoldEnd" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "leftholdend"
 
-[node name="RightArrowHoldEnd" type="AnimatedSprite" parent="."]
+[node name="RightArrowHoldEnd" type="AnimatedSprite" parent="animated"]
 position = Vector2( 550.707, 84.185 )
 scale = Vector2( 0.75, 0.75 )
 frames = SubResource( 13 )
 animation = "rightholdend"
+
+[node name="sprite" type="Node2D" parent="."]
+
+[node name="up" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 9
+vframes = 6
+frame = 25
+
+[node name="down" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 9
+vframes = 6
+frame = 16
+
+[node name="left" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 9
+vframes = 6
+frame = 34
+
+[node name="right" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 9
+vframes = 6
+frame = 43
+
+[node name="leftholdend" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 7
+frame = 88
+
+[node name="rightholdend" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 7
+frame = 89
+
+[node name="upholdend" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 14
+frame = 25
+
+[node name="downholdend" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 14
+frame = 12
+
+[node name="downhold" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 17
+frame = 77
+
+[node name="uphold" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, 0 )
+hframes = 13
+vframes = 17
+frame = 90
+
+[node name="lefthold" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, -13 )
+hframes = 13
+vframes = 20
+frame = 116
+
+[node name="righthold" type="Sprite" parent="sprite"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+offset = Vector2( 30, -13 )
+hframes = 13
+vframes = 20
+frame = 129

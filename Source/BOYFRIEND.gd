@@ -8,7 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("AnimatedSprite").emit_signal("play_animation", "attack")
+	get_node("AnimatedSprite").emit_signal("play_animation", "idle")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

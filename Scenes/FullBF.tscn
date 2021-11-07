@@ -20,6 +20,7 @@ visible = false
 [node name="AnimatedSprite" parent="BOYFRIEND" index="0"]
 position = Vector2( 765.797, 448.871 )
 animation = "up"
+frame = 0
 
 [node name="Camera2D" parent="BOYFRIEND" index="1"]
 position = Vector2( 767.064, 449.225 )
